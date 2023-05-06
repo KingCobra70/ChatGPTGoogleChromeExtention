@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "OpenAI Chat Extension",
+  "version": "1.0",
+  "description": "A simple extension to add a Continue and Save file button to OpenAI Chat.",
+  "icons": {
+    "48": "icon.png"
+  },
+  "permissions": ["activeTab"],
+  "action": {
+    "default_icon": {
+      "48": "icon.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://chat.openai.com/*"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}
